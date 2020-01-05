@@ -1,0 +1,51 @@
+/*define variables scope, in this case root*/
+:root {
+  --main-bg-color: #f4f4f4;
+  --main-text-color: #000;
+  --container-width: 90%;
+  --header-bg-clr: #333333;
+  --header-text-clr: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+.container {
+  width: var(--container-width);
+  margin: 20px auto;
+}
+header#main-header {
+  background-color: var(--header-bg-clr);
+  color: var(--header-text-clr);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+/*define box var */
+.box {
+  --box-bg-clr: #ddd;
+  --box-main-clr: #06c;
+  --box-padding: 10px 20px;
+  --box-shadow-h-offset: 10px;
+  --box-shadow-v-offset: 10px;
+  --box-shadow-blur: 5px;
+}
+.box {
+  background-color: var(--box-bg-clr);
+  padding: var(--box-padding);
+  border: 1px solid var(--box-main-clr);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset)
+    var(--box-shadow-blur);
+}
+/*variable works only for box*/
+h1 {
+  color: var(--box-main-clr);
+}
