@@ -1,3 +1,5 @@
-#chain {
+#chain,
+#battery,
+#hourglass {
   font-size: 3rem;
 }
