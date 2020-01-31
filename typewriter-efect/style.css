@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  align-items: center;
+
   padding: 0 3rem;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -29,6 +29,9 @@ h1 {
 h2 {
   font-size: 2rem;
   color: #aaa;
+}
+.txt-type .txt {
+  border-right: solid #aaa;
 }
 @media (min-width: 1200px) {
   h1 {

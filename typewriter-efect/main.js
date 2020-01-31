@@ -26,7 +26,15 @@ TypeWriter.prototype.type = function() {
     this.txt = fulltxt.substring(0, this.txt.length + 1);
   }
   console.log(this.txt);
+  let typespeed = 400;
+  if (this.isDeleting) {
+    typespeed /= 2;
+  }
+
   if (!this.isDeleting && this.txt === fulltxt) {
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
     this.wordIndex++;
   }
 
@@ -34,7 +42,7 @@ TypeWriter.prototype.type = function() {
 
   setTimeout(() => {
     this.type();
-  }, 500);
+  }, typespeed);
 };
 
 document.addEventListener("DOMContentLoaded", init);
