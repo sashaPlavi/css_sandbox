@@ -1,0 +1,50 @@
+body {
+  background-color: #333;
+}
+
+.box {
+  padding: 1rem;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: anima;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  /*animation-delay: 2s;*/
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anima {
+  0% {
+    background-color: wheat;
+    left: 0px;
+    top: 0px;
+    border-radius: 0 0 0 0;
+  }
+  25% {
+    background-color: red;
+    left: 300px;
+    top: 0px;
+    border-radius: 0 50% 0 0;
+  }
+  50% {
+    background-color: blue;
+    left: 300px;
+    top: 300px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: brown;
+    left: 0px;
+    top: 300px;
+    border-radius: 50% 50% 50% 0;
+  }
+  100% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
